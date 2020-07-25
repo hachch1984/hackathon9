@@ -1,13 +1,14 @@
 
-let step = 0;
-let selectedExerciseCode = "";
-const txt = document.getElementById('userText');
-let arrData = [];
+
+var txt = document.getElementById('userText');
+var arrData = [];
+var step = 0;
+var selectedExerciseCode = "";
 
 function userText_keyEvent_Enter(event) {
 
     if (event.keyCode === 13 && selectedExerciseCode === "") {
-        let exerciseCode = txt.value.trim();
+        var exerciseCode = txt.value.trim();
         if (txt.value.toLowerCase() === "cls") {
             document.getElementById('textList').innerHTML = '';
             fxLoad();
@@ -18,8 +19,8 @@ function userText_keyEvent_Enter(event) {
             fxConsole_AddText('*** EJERCICIO NUMERO ' + exerciseCode + ' ***', 'yellow');
 
             txt.removeEventListener('keyup', userText_keyEvent_Enter);
-            let exercise;
-            let img;
+            var exercise;
+            var img;
             switch (Number(selectedExerciseCode)) {
                 case 1:
                     exercise = exercise1;
@@ -105,7 +106,7 @@ function fxConsole_AddText_White(value, color) {
     fxConsole_AddText(value, "white");
 }
 function fxConsole_AddText(value, color) {
-    let textList = document.getElementById('textList');
+    var textList = document.getElementById('textList');
     textList.innerHTML += "<p style='color:" + color + ";'> > " + value + "</p>";
     document.getElementById('userText').value = '';
     textList.scrollTop = textList.scrollHeight + 100;
@@ -151,7 +152,7 @@ function exercise1(event) {
 
 
 function exercise2(event) {
-    let nota1, nota2, nota3, nota4;
+    var nota1, nota2, nota3, nota4;
     if (event.keyCode === 13 || event.key === '%') {
         switch (step) {
             case 0:
@@ -249,7 +250,7 @@ function exercise5(event) {
                 step++;
                 break;
             case 1:
-                let radio = fxGetNumber();
+                var radio = fxGetNumber();
                 fxConsole_AddText_Yellow(radio);
                 fxConsole_AddText_Yellow("*** el area del circulo es : " + (radio * radio * Math.PI));
                 fxResetKeyUpEvent(exercise5);
@@ -293,7 +294,7 @@ function exercise7(event) {
                 step++;
                 break;
             case 1:
-                let meters = fxGetNumber();
+                var meters = fxGetNumber();
                 fxConsole_AddText_Yellow(meters);
                 fxConsole_AddText_Yellow("*** el valor en pulgadas es: " + (meters * 39.37));
                 fxResetKeyUpEvent(exercise7);
@@ -312,7 +313,7 @@ function exercise8(event) {
                 step++;
                 break;
             case 1:
-                let soles = fxGetNumber();
+                var soles = fxGetNumber();
                 fxConsole_AddText_Yellow(soles);
                 fxConsole_AddText_Yellow("*** la cantidad de dolares es: " + (soles / 3.495));
                 fxResetKeyUpEvent(exercise8);
@@ -331,7 +332,7 @@ function exercise9(event) {
                 step++;
                 break;
             case 1:
-                let bornYear = fxGetNumber();
+                var bornYear = fxGetNumber();
                 fxConsole_AddText_Yellow(bornYear);
                 fxConsole_AddText_Yellow("*** la edad es: " + (2020 / bornYear));
                 fxResetKeyUpEvent(exercise9);
@@ -343,7 +344,7 @@ function exercise9(event) {
 
 
 function exercise10(event) {
-    let str
+    var str
     if (event.keyCode === 13 || event.key === '%') {
         switch (step) {
             case 0:
@@ -386,17 +387,17 @@ function exercise10(event) {
                 step++;
                 break;
             case 6:
-                let persona1 = arrData[0];
-                let persona1edad = arrData[1];
-                let persona2 = arrData[2];
-                let persona2edad = arrData[3];
-                let persona3 = arrData[4];
-                let persona3edad = fxGetNumber();
+                var persona1 = arrData[0];
+                var persona1edad = arrData[1];
+                var persona2 = arrData[2];
+                var persona2edad = arrData[3];
+                var persona3 = arrData[4];
+                var persona3edad = fxGetNumber();
 
                 fxConsole_AddText_Yellow(persona3edad);
 
-                let menor = '';
-                let edad = 0;
+                var menor = '';
+                var edad = 0;
                 if (persona1edad < persona2edad && persona1edad < persona3edad) {
                     menor = persona1;
                     edad = persona1edad;
@@ -426,9 +427,9 @@ function exercise11(event) {
                 step++;
                 break;
             case 1:
-                let years = fxGetNumber();
+                var years = fxGetNumber();
                 fxConsole_AddText_Yellow(years);
-                let bono;
+                var bono;
                 if (years > 5)
                     bono = 1000;
                 else
@@ -444,8 +445,8 @@ function exercise11(event) {
 
 function exercise12(event) {
     if (event.key === '%') {
-        let sueldo = 1500;
-        let contador = 2;
+        var sueldo = 1500;
+        var contador = 2;
         while (contador <= 6) {
             sueldo = sueldo + (sueldo * 0.10);
             fxConsole_AddText_Yellow("*** pago en el año numero: " + contador + ', es: ' + sueldo);
@@ -470,7 +471,7 @@ function exercise13(event) {
 
         }
         else if (step === 1) {
-            let max = fxGetNumber();
+            var max = fxGetNumber();
             arrData.push(max);//0 - max
             arrData.push(1);//1 - cont
             arrData.push(0);//2 - approved
@@ -481,14 +482,14 @@ function exercise13(event) {
             fxConsole_AddText_Yellow("ingrese la nota numero: " + 1 + ', de: ' + max);
         }
         else {
-            let note = fxGetNumber();
+            var note = fxGetNumber();
 
             fxConsole_AddText_Yellow(note);
 
-            let max = arrData[0];
-            let cont = arrData[1];
-            let approved = arrData[2];
-            let disapproved = arrData[3];
+            var max = arrData[0];
+            var cont = arrData[1];
+            var approved = arrData[2];
+            var disapproved = arrData[3];
 
             if (note >= 11) {
                 approved++;
@@ -522,7 +523,7 @@ function exercise13(event) {
 
 function exercise14(event) {
     if (event.keyCode === 13 || event.key === '%') {
-        let green, red, white;
+        var green, red, white;
         if (event.keyCode === 13 || event.key === '%') {
            
             switch (step) {
@@ -564,7 +565,7 @@ function exercise14(event) {
 
 function exercise15(event) {
     if (event.keyCode === 13 || event.key === '%') {
-        let year, month, day;
+        var year, month, day;
         if (event.keyCode === 13 || event.key === '%') {
           
             switch (step) {
@@ -592,7 +593,7 @@ function exercise15(event) {
                     day = fxGetNumber();
                     fxConsole_AddText_Yellow(day);
 
-                    let years = 0;
+                    var years = 0;
 
                     years = 2021 - year;
 
