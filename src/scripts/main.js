@@ -9,7 +9,7 @@ function userText_keyEvent_Enter(event) {
 
     if (event.keyCode === 13 && selectedExerciseCode === "") {
         var exerciseCode = txt.value.trim();
-        if (txt.value.toLowerCase() === "cls") {
+        if (txt.value.toLowerCase().trim() === "cls") {
             document.getElementById('textList').innerHTML = '';
             fxLoad();
         }
@@ -109,7 +109,7 @@ function fxConsole_AddText(value, color) {
     var textList = document.getElementById('textList');
     textList.innerHTML += "<p style='color:" + color + ";'> > " + value + "</p>";
     document.getElementById('userText').value = '';
-    textList.scrollTop = textList.scrollHeight + 100;
+    textList.scrollTop = textList.scrollHeight + 150;
 }
 function fxLoad() {
     fxConsole_AddText('Bienvenido a la consola, para utilizar esta consola de ejercicios, digite los numeros entre el 1 y el 15', 'lightgreen');

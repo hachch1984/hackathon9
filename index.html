@@ -7,19 +7,26 @@
     <title>Document</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
             background-color: whitesmoke;
         }
-        .textbox{
-            outline: none; 
+
+        .textbox {
+            outline: none;
             border: none;
-             background-color: lightgray; 
-             width:100%; 
+            background-color: lightgray;
+            width: 100%;
             padding: 5px;
+            margin-top: 15px;
         }
-        
     </style>
 </head>
 
@@ -35,7 +42,8 @@
 
 
 
-    <div style="margin: auto; margin-top: 20px;   display: flex;  width: 1000px;  ">
+    <div style="margin: auto; margin-top: 20px;   
+    display: flex;  width: 1000px; justify-content: space-between; ">
 
 
 
@@ -50,16 +58,13 @@
                 <div id='textList'>
 
                 </div>
-                <input class="textbox" 
-                id='userText' 
-                placeholder="type here" 
-                type="text" onkeyup="userText_keyEvent_Enter(event)" 
-                  />
+                <input class="textbox" id='userText' placeholder="type here" type="text"
+                    onkeyup="userText_keyEvent_Enter(event)" />
 
             </div>
         </div>
 
-        <figure style="width: 500px; height: 500px;">
+        <figure style="width: 470px; height: 500px;">
             <img id='image' src="./images/0.png" alt="">
         </figure>
 
