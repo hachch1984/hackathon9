@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <div style="background-color: darkgray; margin: auto; margin-top: 20px; width: 500px; ">
+        <span style="padding: 5px; display: block; color: black;">CONSOLE</span>
+        <div id='console' style="
+         height: 600px;
+      border: solid 5px darkgray;
+     background-color: black;color: white; overflow: hidden;
+     overflow: hidden; overflow-y: scroll; ">
+
+            <div id='textList'>
+
+            </div>
+            <input id='userText' placeholder="type here" type="text"
+             onkeyup="userText_keyEvent_Enter(event)" style="border: none; background-color: lightgray; width: 96%; 
+            padding: 5px;" />
+
+        </div>
+    </div>
+
+
+
+
     <script src="./src/scripts/main.js"></script>
 </body>
+
 </html>

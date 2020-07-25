@@ -1,12 +1,12 @@
 {
-  "name": "friday",
+  "name": "hackathon9",
   "version": "1.0.0",
-  "description": "week 9 class 3",
+  "description": "week 9",
   "main": "index.js",
   "scripts": {
     "test": "hello"
   },
-  "author": "henry chavez",
+  "author": "henry alberto chavez chavez",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.19"
