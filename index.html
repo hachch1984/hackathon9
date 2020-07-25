@@ -10,29 +10,41 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 15px;
+            background-color: slategrey;
         }
     </style>
 </head>
 
 <body>
 
-    <div style="background-color: darkgray; margin: auto; margin-top: 20px; width: 500px; ">
-        <span style="padding: 5px; display: block; color: black;">CONSOLE</span>
-        <div id='console' style="
-         height: 600px;
-      border: solid 5px darkgray;
-     background-color: black;color: white; overflow: hidden;
-     overflow: hidden; overflow-y: scroll; ">
 
-            <div id='textList'>
+    <div style="margin: auto; margin-top: 20px;   display: flex;  width: 1000px;  ">
 
-            </div>
-            <input id='userText' placeholder="type here" type="text"
-             onkeyup="userText_keyEvent_Enter(event)" style="border: none; background-color: lightgray; width: 96%; 
+
+
+        <div style="background-color: darkgray;  width: 500px; ">
+            <span style="padding: 5px; display: block; color: black;">CONSOLE</span>
+            <div id='console' style="
+                height: 600px;
+                border: solid 5px darkgray;
+                background-color: black;color: white; overflow: hidden;
+                overflow: hidden; overflow-y: scroll; ">
+
+                <div id='textList'>
+
+                </div>
+                <input id='userText' placeholder="type here" type="text" onkeyup="userText_keyEvent_Enter(event)" style="border: none; background-color: lightgray; width: 96%; 
             padding: 5px;" />
 
+            </div>
         </div>
+
+        <figure style="width: 500px; height: 500px;">
+            <img id='image' src="./images/0.png" alt="">
+        </figure>
+
     </div>
+
 
 
 

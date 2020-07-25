@@ -19,55 +19,72 @@ function userText_keyEvent_Enter(event) {
 
             txt.removeEventListener('keyup', userText_keyEvent_Enter)
             let exercise
+            let img
             switch (Number(selectedExerciseCode)) {
                 case 1:
                     exercise = exercise1
+                    img=1
                     break
                 case 2:
                     exercise = exercise2
+                    img=2
                     break
                 case 3:
                     exercise = exercise3
+                    img=3
                     break
                 case 4:
                     exercise = exercise4
+                    img=4
                     break
                 case 5:
                     exercise = exercise5
+                    img=5
                     break
                 case 6:
                     exercise = exercise6
+                    img=6
                     break
                 case 7:
                     exercise = exercise7
+                    img=7
                     break
                 case 8:
                     exercise = exercise8
+                    img=8
                     break
                 case 9:
                     exercise = exercise9
+                    img=9
                     break
                 case 10:
                     exercise = exercise10
+                    img=10
                     break;
                 case 11:
                     exercise = exercise11
+                    img=11
                     break
                 case 12:
                     exercise = exercise12
+                    img=12
                     break
                 case 13:
                     exercise = exercise13
+                    img=13
                     break
                 case 14:
                     exercise = exercise14
+                    img=14
                     break
                 case 15:
                     exercise = exercise15
+                    img=15
                     break
             }
             txt.addEventListener('keyup', exercise)
             txt.dispatchEvent(new KeyboardEvent('keyup', { 'key': '%' }))
+            document.getElementById('image').src='./images/'+img+'.png'
         }
         else {
             fxConsole_AddText('codigo de ejercicio incorrecto, el valor debe ser entre los numeros 1 y 15', 'red')
@@ -102,6 +119,7 @@ function fxResetKeyUpEvent(oldFunction) {
     selectedExerciseCode = ""
     step = 0
     arrData = []
+    document.getElementById('image').src='./images/0.png'
     fxLoad()
 }
 
