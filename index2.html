@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        * {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        body {
+            background-color: ghostwhite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="jumbotron jumbotron-fluid p-3">
+            <div class="container">
+                <h1 class="display-4">Hackathon 10</h1>
+                <a href="" target="_blank">Visit My Github</a>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+
+                <div class="col-4">
+
+                    <div class="card   mb-3">
+                        <div class="card-header">
+                            <h4> Ejercicios</h4>
+                        </div>
+                        <div class="card-body" style="height: 700px;  overflow-y: auto;">
+
+
+
+                            <label for="r1"> <input id="r1" onchange="showExercise(1)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">01).-</h6> Utilizando función arrow, crear una función que
+                                reciba como parámetros un
+                                nombre, apellido y edad y los retorne en un string concatenado.<span class="text-muted">
+                                    Ejemplo: “Hola mi
+                                    nombre es sebastián yabiku y mi edad 33”</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r2"> <input id="r2" onchange="showExercise(2)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">02).-</h6>Cree una función que tome números y devuelva la suma
+                                de sus cubos.
+                                <span class="text-muted">
+                                    sumOfCubes(1, 5, 9) ➞ 855
+                                    // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855 </span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r3"> <input id="r3" onchange="showExercise(3)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">03).-</h6>Crear una funcion que me retorne el tipo de valor
+                                entregado, utilizar la función
+                                e imprimir los distintos tipos de JS.
+                            </label>
+                            <p class="border"></p>
+                            <label for="r4"> <input id="r4" onchange="showExercise(4)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">04).-</h6> Crear una función que reciba n cantidad de
+                                argumentos y los sume ( utilizar
+                                parametros rest)
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r5"> <input id="r5" onchange="showExercise(5)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">05).-</h6>Crear una función que reciba una matriz de valores y
+                                filtre los valores que no
+                                son string
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r6"> <input id="r6" onchange="showExercise(6)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">06).-</h6> Cree una función que tome una matriz de números y
+                                devuelva los números
+                                mínimos y máximos, en ese orden.<span class="text-muted">
+                                    minMax([1, 2, 3, 4, 5]) ➞ [1, 5]</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r7"> <input id="r7" onchange="showExercise(7)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">07).-</h6>Escriba una función que tome una matriz de 10
+                                enteros (entre 0 y 9) y devuelva
+                                una cadena en forma de un número de teléfono.<span class="text-muted">
+                                    formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) ➞ "(123) 456-7890" </span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r8"> <input id="r8" onchange="showExercise(8)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">08).-</h6>Cree una función que tome una matriz de matrices con
+                                números. Devuelve una
+                                nueva matriz (única) con el mayor número de cada uno.<span class="text-muted">
+                                    findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90,
+                                    2]</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r9"> <input id="r9" onchange="showExercise(9)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">09).-</h6> Dada una palabra, escriba una función que devuelva
+                                el primer índice y el último
+                                índice de un carácter.<span class="text-muted">
+                                    charIndex("hello", "l") ➞ [2, 3]
+                                    // The first "l" has index 2, the last "l" has index 3.
+                                    charIndex("circumlocution", "c") ➞ [0, 8]
+                                    // The first "c" has index 0, the last "c" has index 8.</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r10"> <input id="r10" onchange="showExercise(10)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">10).-</h6> Escriba una función que convierta un objeto en una
+                                matriz, donde cada
+                                elemento representa un par clave-valor.<span class="text-muted">
+                                    toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r11"> <input id="r11" onchange="showExercise(11)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">11).-</h6> Cree la función que toma una matriz con objetos y
+                                devuelve la suma de los
+                                presupuestos de las personas.<span class="text-muted">
+                                    getBudgets([
+                                    { name: "John", age: 21, budget: 23000 },
+                                    { name: "Steve", age: 32, budget: 40000 },
+                                    { name: "Martin", age: 16, budget: 2700 }
+                                    ]) ➞ 65700</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r12"> <input id="r12" onchange="showExercise(12)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">12).-</h6> Cree una función que tome una matriz de estudiantes
+                                y devuelva una matriz de
+                                nombres de estudiantes.<span class="text-muted">
+                                    getStudentNames([
+                                    { name: "Steve" },
+                                    { name: "Mike" },
+                                    { name: "John" }
+                                    ]) ➞ ["Becky", "John", "Steve"]</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r13"> <input id="r13" onchange="showExercise(13)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">13).-</h6> Escriba una función que convierta un objeto en una
+                                matriz de claves y valores.<span class="text-muted">
+                                    objectToArray({
+                                    likes: 2,
+                                    dislikes: 3,
+                                    followers: 10
+                                    }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r14"> <input id="r14" onchange="showExercise(14)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">14).-</h6>
+                                Cree una función donde, dado el número n, devuelva la suma de todos los
+                                números cuadrados incluyendo n.<span class="text-muted">
+                                    squaresSum(3) ➞ 14
+                                    // 1² + 2² + 3² =
+                                    // 1 + 4 + 9 =
+                                    // 14</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r15"> <input id="r15" onchange="showExercise(15)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">15).-</h6>Cree una función para multiplicar todos los valores
+                                en una matriz por la
+                                cantidad de valores en la matriz dada.<span class="text-muted">
+                                    multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r16"> <input id="r16" onchange="showExercise(16)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">16).-</h6>Cree una función que tome un número como argumento y
+                                devuelva una matriz
+                                de números contando desde este número a cero.<span class="text-muted">
+                                    countdown(5) ➞ [5, 4, 3, 2, 1, 0]</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r17"> <input id="r17" onchange="showExercise(17)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">17).-</h6>. Cree una función que tome una matriz y devuelva la
+                                diferencia entre los
+                                números más grandes y más pequeños.<span class="text-muted">
+                                    diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82
+                                    // Smallest number is -50, biggest is 32.</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r18"> <input id="r18" onchange="showExercise(18)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">18).-</h6>Cree una función que filtre las cadenas de una
+                                matriz y devuelva una nueva
+                                matriz que solo contenga enteros.<span class="text-muted">
+                                    filterList([1, 2, 3, "x", "y", 10]) ➞ [1, 2, 3, 10]</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r19"> <input id="r19" onchange="showExercise(19)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">19).-</h6>Cree una función que tome dos argumentos (elemento,
+                                tiempos). El primer
+                                argumento (elemento) es el elemento que necesita repetirse, mientras que el
+                                segundo argumento (veces) es la cantidad de veces que se debe repetir el
+                                elemento. Devuelve el resultado en una matriz.<span class="text-muted">
+                                    repeat(13, 5) ➞ [13, 13, 13, 13, 13]</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r20"> <input id="r20" onchange="showExercise(20)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">20).-</h6>Escriba una función, .vreplace () que extienda el
+                                prototipo de cadena
+                                reemplazando todas las vocales en una cadena con una vocal especificada.<span
+                                    class="text-muted">
+                                    "apples and bananas".vreplace("u") ➞ "upplus und bununus"</span>
+                            </label>
+                            <p class="border"></p>
+                            <label for="r21"> <input id="r21" onchange="showExercise(21)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">21).-</h6>Te dan una cadena de palabras. Debe encontrar la
+                                palabra "Nemo" y devolver
+                                una cadena como esta: "¡Encontré a Nemo en [el orden de la palabra que
+                                encuentra nemo]!".<span class="text-muted">
+                                    findNemo("I am finding Nemo !") ➞ "I found Nemo at 4!"</span>
+
+                            </label>
+                            <p class="border"></p>
+                            <label for="r22"> <input id="r22" onchange="showExercise(22)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">22).-</h6>Cree una función que capitalice la última letra de
+                                cada palabra.<span class="text-muted">
+                                    capLast("hello") ➞ "hellO"</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <div class="col-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 id='title'> (0_0)</h4>
+                        </div>
+                        <div class="card-body">
+
+
+                            <textarea id="tb0"
+                                style="  resize: none; overflow: scroll ; height: 500px; width: 100%;"></textarea>
+
+
+
+
+
+
+
+                            <div class="py-2">
+
+                                <button onclick="bnExecute_click()" class="btn btn-primary ">Ejecutar Algoritmo</button>
+                            </div>
+
+                        </div>
+                        <div class="card-header border">Resultado</div>
+
+                        <div class="card-body">
+                            <p id='result'></p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+    </main>
+
+
+
+
+
+    <script src='./src/scripts/index2.js'></script>
+
+    <script>
+
+
+    </script>
+
+
+</body>
+
+</html>
