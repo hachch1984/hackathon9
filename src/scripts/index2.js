@@ -1,8 +1,8 @@
-const result = document.getElementById("result");
-const title = document.getElementById("title");
-const textArea = document.getElementById("tb0");
+var result = document.getElementById("result");
+var title = document.getElementById("title");
+var textArea = document.getElementById("tb0");
 function bnExecute_click() {
-    let value;
+    var value;
     try {
         value = eval(textArea.value);
     }
@@ -17,13 +17,13 @@ function showCode(code) {
 }
 function clear() {
     title.innerHTML = "(0_0)";
-    result.innerHTML = ''
-    textArea.value = ''
+    result.innerHTML = '';
+    textArea.value = '';
 }
 
 function showExercise(number) {
     clear();
-    let code = "";
+    var code = "";
     try {
         switch (number) {
             case 1:
@@ -268,7 +268,7 @@ function showExercise(number) {
 
                 break;
             case 22:
-                  code = `                                                
+                code = `                                                
                    function capLast(value) {
                       let length = value.length;                      
                       return value.substring(0, length - 1) + value.substring(length - 1).toUpperCase();
@@ -287,4 +287,3 @@ function showExercise(number) {
     }
     title.innerHTML = "Ejercicio Numero: " + number + ", Algoritmo:";
 }
-//# sourceMappingURL=index2.js.map
