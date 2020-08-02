@@ -29,7 +29,7 @@
             width: 100%;
         }
 
-        @media (max-width: 765px) {
+        @media (max-width: 768px) {
             .list {
                 height: 300px;
             }
@@ -40,25 +40,40 @@
 <body>
 
     <header>
+        <!--utilice bootstrap para ayudarme con los estilos
+            jumbotron ( https://getbootstrap.com/docs/4.0/components/jumbotron/ )
+            diplay4 ( https://getbootstrap.com/docs/4.0/content/typography/ )
+            text-center ( https://getbootstrap.com/docs/4.0/utilities/text/ )
+            
+    -->
         <div class="jumbotron jumbotron-fluid p-2">
-            <div  >
-                <h1 class="display-4 text-center  ">Hackathon 10</h1>                
+            <div>
+                <h1 class="display-4 text-center  ">Hackathon 10</h1>
             </div>
         </div>
     </header>
 
     <main>
-
+        <!-- "container", "row", "col" ( https://getbootstrap.com/docs/4.0/layout/grid/ ) -->
         <div class="container my-4">
             <div class="row">
-
                 <div class=" col-md-4">
+                    <!--
+                        card ( https://getbootstrap.com/docs/4.0/components/card/ )
+                        ***las partes de un card son: card-header, card-body, card-title (este no lo use)
+                    -->
                     <div class="card   mb-3">
                         <div class="card-header">
                             <h4> Ejercicios</h4>
                         </div>
                         <div class="card-body list">
-                            <label for="r1"> <input id="r1" onchange="mostrarArgoritmo(1)" type="radio" name="g1">
+                            <!-- "r1" es el id del radio -->
+                            <!-- "mx-1"  margin segun la coordenada x -->
+                            <!-- "d-inline"  -->
+                            <!-- "text-muted" cambiar de color al texto, algo como un gris claro -->
+                            <!-- "border" genera un borde a los cuatro lados  -->
+                            <label for="r1">
+                                <input id="r1" onchange="mostrarArgoritmo(1)" type="radio" name="g1">
                                 <h6 class="mx-1 d-inline">01).-</h6> Sumar dos numeros
                                 <span class="text-muted">
                                     Ejemplo: 1 + 3 = 4
@@ -66,7 +81,7 @@
                             </label>
 
                             <p class="border"></p>
-
+                            <!-- "r2" es el id del radioButton, obviamente este va cambiando segun mas radio existan -->
                             <label for="r2"> <input id="r2" onchange="mostrarArgoritmo(2)" type="radio" name="g1">
                                 <h6 class="mx-1 d-inline">02).-</h6>Restar dos numeros
                                 <span class="text-muted">
@@ -84,8 +99,11 @@
                             <h4 id='title'> (0_0) </h4>
                         </div>
                         <div class="card-body">
+                            <!-- "tb0" id del textArea -->
+                            <!-- "py-2" padding segun la coordenada y  -->
                             <textarea id="tb0" class="textArea"></textarea>
                             <div class="py-2">
+                                <!-- "btn" ( https://getbootstrap.com/docs/4.0/components/buttons/ )  -->
                                 <button onclick="bnExecute_click()" class="btn btn-primary ">Ejecutar Algoritmo</button>
                             </div>
                         </div>
@@ -93,6 +111,7 @@
                             Resultado
                         </div>
                         <div class="card-body">
+                            <!-- "result" id del la etiqueta p -->
                             <p id='result'></p>
                         </div>
                     </div>
