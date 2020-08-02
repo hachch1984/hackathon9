@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        * {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        body {
+            background-color: ghostwhite;
+        }
+
+        .list {
+            overflow: scroll;
+            height: 600px;
+        }
+
+        .textArea {
+            resize: none;
+            overflow: scroll;
+            height: 400px;
+            width: 100%;
+        }
+
+        @media (max-width: 765px) {
+            .list {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="jumbotron jumbotron-fluid p-2">
+            <div  >
+                <h1 class="display-4 text-center  ">Hackathon 10</h1>                
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container my-4">
+            <div class="row">
+
+                <div class=" col-md-4">
+                    <div class="card   mb-3">
+                        <div class="card-header">
+                            <h4> Ejercicios</h4>
+                        </div>
+                        <div class="card-body list">
+                            <label for="r1"> <input id="r1" onchange="mostrarArgoritmo(1)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">01).-</h6> Sumar dos numeros
+                                <span class="text-muted">
+                                    Ejemplo: 1 + 3 = 4
+                                </span>
+                            </label>
+
+                            <p class="border"></p>
+
+                            <label for="r2"> <input id="r2" onchange="mostrarArgoritmo(2)" type="radio" name="g1">
+                                <h6 class="mx-1 d-inline">02).-</h6>Restar dos numeros
+                                <span class="text-muted">
+                                    Ejemplo: 8 - 3 = 5 </span>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 id='title'> (0_0) </h4>
+                        </div>
+                        <div class="card-body">
+                            <textarea id="tb0" class="textArea"></textarea>
+                            <div class="py-2">
+                                <button onclick="bnExecute_click()" class="btn btn-primary ">Ejecutar Algoritmo</button>
+                            </div>
+                        </div>
+                        <div class="card-header border">
+                            Resultado
+                        </div>
+                        <div class="card-body">
+                            <p id='result'></p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+    </main>
+
+
+
+
+
+    <script src='./src/scripts/index3.js'></script>
+
+
+
+
+</body>
+
+</html>
