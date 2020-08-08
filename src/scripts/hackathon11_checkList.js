@@ -1,7 +1,8 @@
 let TaskCounter = 1;
 const addTask = () => {
     let txtTask = document.getElementById("txtTask");
-    let html = `
+    if (txtTask.checkValidity()) {
+        let html = `
     <li class="d-flex flex-row"> 
         <div class="form-check">
             <input type="checkbox" class="form-check-input" id="chk${TaskCounter}">
@@ -9,15 +10,20 @@ const addTask = () => {
         </div>
     </li>
     `;
-    let ul1 = document.getElementById("ul1");
-    ul1.insertAdjacentHTML("beforeend", html);
-    let chk = document.getElementById("chk" + TaskCounter);
-    chk.addEventListener("change", (event) => {
-        let sender = event.currentTarget;
-        let lchk = document.getElementById("l" + sender.id);
-        lchk.style.textDecoration = sender.checked ? "line-through" : "none";
-    });
-    TaskCounter++;
-    txtTask.value = "";
+        let ul1 = document.getElementById("ul1");
+        ul1.insertAdjacentHTML("beforeend", html);
+        let chk = document.getElementById("chk" + TaskCounter);
+        chk.addEventListener("change", (event) => {
+            let sender = event.currentTarget;
+            let lchk = document.getElementById("l" + sender.id);
+            lchk.style.textDecoration = sender.checked ? "line-through" : "none";
+        });
+        TaskCounter++;
+        txtTask.value = "";
+    }
+    else {
+        alert("you forgotten type the task");
+        txtTask.focus();
+    }
 };
 //# sourceMappingURL=hackathon11_checkList.js.map

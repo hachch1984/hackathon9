@@ -1,7 +1,7 @@
-const createRowButtons = (...values: string[]) => {
+const createRowButtons = (...arrValues: string[]) => {
   let div = document.createElement("div");
 
-  values.forEach((value) => {
+  arrValues.forEach((value) => {
     let button = document.createElement("button");
     button.innerHTML = value;
     button.addEventListener("click", (event) => {
@@ -63,5 +63,3 @@ const createButtons = () => {
   createRowButtons("1", "2", "3", "-");
   createRowButtons("0", ".", "=", "+");
 };
-
-/********************************************************************************************************** */

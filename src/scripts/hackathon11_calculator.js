@@ -1,6 +1,6 @@
-const createRowButtons = (...values) => {
+const createRowButtons = (...arrValues) => {
     let div = document.createElement("div");
-    values.forEach((value) => {
+    arrValues.forEach((value) => {
         let button = document.createElement("button");
         button.innerHTML = value;
         button.addEventListener("click", (event) => {
@@ -58,5 +58,4 @@ const createButtons = () => {
     createRowButtons("1", "2", "3", "-");
     createRowButtons("0", ".", "=", "+");
 };
-/********************************************************************************************************** */
 //# sourceMappingURL=hackathon11_calculator.js.map
