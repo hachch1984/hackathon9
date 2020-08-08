@@ -1,0 +1,85 @@
+body {
+  font-family: Courier, monospace, "Courier New";
+}
+
+.calculator {
+  padding: 20px;
+  width: 350px;
+  border: solid 1px lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+.screen {
+  margin: 2px;
+  width: 300px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  padding: 2px 20px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.screen small {
+  font-size: 13px;
+}
+
+.screen p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.divRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.divRow button {
+  width: 70px;
+  height: 45px;
+  border: none;
+  margin: 2px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.divRow button:hover {
+  font-size: 20px;
+  background-color: #85e0dc;
+}
+
+.background-color-darkGray {
+  background-color: #dfe1e5;
+}
+
+.background-color-lightGray {
+  background-color: #f1f3f4;
+}
+
+.background-color-lightBlue {
+  background-color: lightblue;
+}
+/*# sourceMappingURL=hackathon11.css.map */
