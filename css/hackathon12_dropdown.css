@@ -30,7 +30,6 @@
 /*****************************************************************/
 .dropDown-list .primary-indicator {
   padding-left: calc(5rem - 16px);
-  background-color: white;
 }
 
 .dropDown-list ul {

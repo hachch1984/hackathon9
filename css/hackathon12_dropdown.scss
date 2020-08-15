@@ -52,11 +52,10 @@ $dropDown_list_width: 13rem;
 .dropDown-list {
   .primary-indicator {
     padding-left: calc(5rem - 16px);
-  
   }
   @include structure-ul();
 }
 /*****************************************************************/
 .dropDown-sub-list {
   @include structure-ul();
-} 
+}
