@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon 12</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/hackathon12_dropdown.css">
+    <link rel="stylesheet" href="./css/hackathon12_collapsible.css">
+    <link rel="stylesheet" href="./css/hackathon12_modalForm.css">
+    
+
+</head>
+
+<body>
+
+    <header>
+        <div class="jumbotron jumbotron-fluid p-2">
+            <div class="container d-flex   justify-content-md-between  align-items-center flex-column flex-md-row">
+                <h1 class="display-4 text-center  ">Hackathon 12</h1>
+                <div class=" d-flex flex-column align-items-center  align-items-md-end">
+                    <span>Henry Alberto Chavez Chavez</span>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+
+    <main class="container ">
+
+        <section class="row">
+
+          
+        <section class=" col-12 col-lg-4  ">
+            <div class="card" >
+                <div class="card-header">
+                    <h2>Drop Down Button</h2>
+                </div>
+                <div  style="height: 300px;" class="card-body d-flex justify-content-center">
+
+                    <div id='dropDown1' class="dropDown">
+
+                    </div>
+
+                 
+
+                </div>
+                <div class="card-footer">
+                    <nav>
+                        <h4>Sources</h4>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/hachch1984/hackathon9/blob/master/css/hackathon11.scss"
+                                    target="_blank" >SCSS file</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/hachch1984/hackathon9/blob/master/src/scripts/hackathon11_calculator.ts"
+                                    target="_blank">JavaScript file</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/hachch1984/hackathon9/blob/master/src/scripts/hackathon11_calculator.ts"
+                                    target="_blank">TypeScript file</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+        
+
+            <section class=" col-12 col-lg-4 pt-3 pt-lg-0">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Collapsible</h2>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+
+                        <div class="collapsible">
+                            <div class="collapsible-item">
+
+                                <div class="collapsible-title">
+                                    Title 1
+                                </div>
+                                <div class="collapsible-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam deleniti
+                                    perferendis consectetur cupiditate ullam sed, illo atque accusantium eius, rerum rem
+                                    sit odio ut dolores distinctio omnis voluptates? Illum?
+                                </div>
+                            </div>
+                            <div class="collapsible-item">
+
+                                <div class="collapsible-title">
+                                    Title 2
+                                </div>
+                                <div class="collapsible-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam deleniti
+                                    perferendis consectetur cupiditate ullam sed, illo atque accusantium eius, rerum rem
+                                    sit odio ut dolores distinctio omnis voluptates? Illum?
+                                </div>
+                            </div>
+                            <div class="collapsible-item">
+
+                                <div class="collapsible-title">
+                                    Title 3
+                                </div>
+                                <div class="collapsible-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam deleniti
+                                    perferendis consectetur cupiditate ullam sed, illo atque accusantium eius, rerum rem
+                                    sit odio ut dolores distinctio omnis voluptates? Illum?
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="card-footer ">
+                        <nav>
+                            <h4>Sources</h4>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/hachch1984/hackathon9/blob/master/css/hackathon11.scss"
+                                        target="_blank" >SCSS file</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/hachch1984/hackathon9/blob/master/src/scripts/hackathon11_calculator.ts"
+                                        target="_blank">JavaScript file</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/hachch1984/hackathon9/blob/master/src/scripts/hackathon11_calculator.ts"
+                                        target="_blank">TypeScript file</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </section>
+        
+
+            <!--Modal Form--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+            <section class=" col-12 col-lg-4  pt-3 pt-lg-0">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Modal Form</h2>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+
+                        <button  id='btnShowModal' class="btn btn-info">Show Modal Form</button>
+
+
+                        <div class="modal-background">
+
+
+                            <div class="modal-form">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Hello I'm a modal from</h5>
+                                    </div>
+                                    <div style="height: 400px;" class="card-body d-flex justify-content-center">
+
+
+                                        <img src="https://picsum.photos/200/300" alt="">
+
+
+                                    </div>
+                                    <div class="card-footer ">
+
+                                        <button class="btn btn-danger" id='btnClose'> Close</button>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="card-footer ">
+                        <nav>
+                            <h4>Sources</h4>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/hachch1984/hackathon9/blob/master/css/hackathon11.scss"
+                                        target="_blank" >SCSS file</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/hachch1984/hackathon9/blob/master/src/scripts/hackathon11_calculator.ts"
+                                        target="_blank">JavaScript file</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/hachch1984/hackathon9/blob/master/src/scripts/hackathon11_calculator.ts"
+                                        target="_blank">TypeScript file</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+    <script src="./src/scripts/hackathon12_dropdown.js"></script>
+
+
+    <script src="./src/scripts/hackathon12_collapsible.js"></script>
+
+    <script src="./src/scripts/hackathon12_modalForm.js"></script>
+
+    <script>
+        dropDown('Button 1', 'dropDown1')
+
+
+
+    </script>
+
+</body>
+
+</html>

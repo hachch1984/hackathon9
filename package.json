@@ -9,7 +9,9 @@
   "author": "henry alberto chavez chavez",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^7.7.0",
     "lodash": "^4.17.19",
+    "prettier": "^2.0.5",
     "terser": "^5.0.0",
     "typescript": "^3.9.7",
     "uglify-js": "^3.10.0"

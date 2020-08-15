@@ -1,0 +1,24 @@
+/*****************************************************************/
+.collapsible {
+  width: 400px;
+}
+
+.collapsible .collapsible-item .collapsible-title {
+  border: solid 1px gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.collapsible .collapsible-item .collapsible-title img {
+  margin-right: 0.5rem;
+}
+
+.collapsible .collapsible-item .collapsible-text {
+  margin: 2px 0;
+  border: solid 1px gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=hackathon12_collapsible.css.map */

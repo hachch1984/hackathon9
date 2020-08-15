@@ -1,0 +1,14 @@
+.modal-background {
+  background: rgba(76, 175, 80, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.modal-form {
+  width: 300px;
+  margin: 100px auto;
+}
+/*# sourceMappingURL=hackathon12_modalForm.css.map */

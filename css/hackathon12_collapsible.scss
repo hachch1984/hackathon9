@@ -1,0 +1,25 @@
+@mixin collapsible-border {
+  border: solid 1px gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+/*****************************************************************/
+.collapsible {
+  width: 400px;
+
+  .collapsible-item {
+    .collapsible-title {
+      @include collapsible-border();
+      background-color: lightblue;
+      img {
+        margin-right: 0.5rem;
+      }
+      cursor: pointer;
+    }
+    .collapsible-text {
+      margin: 2px 0;
+      @include collapsible-border();
+    }
+  }
+}

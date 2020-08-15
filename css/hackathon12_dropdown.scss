@@ -1,0 +1,62 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+/*****************************************************************/
+$dropDown_list_width: 13rem;
+/*****************************************************************/
+.dropDown-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $dropDown_list_width;
+  height: 3rem;
+  background-color: lightsteelblue;
+  color: darkblue;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 1px 1px lightgray;
+  cursor: pointer;
+}
+/*****************************************************************/
+@mixin structure-ul {
+  ul {
+    list-style-type: none;
+    margin-top: 0.2rem;
+    width: $dropDown_list_width;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid 1px lightgray;
+    z-index: 50;
+    background-color: white;
+    li {
+      padding: 0.5rem;
+      a {
+        cursor: pointer;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+        span {
+          margin-left: 0.2rem;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+/*****************************************************************/
+.dropDown-list {
+  .primary-indicator {
+    padding-left: calc(5rem - 16px);
+  
+  }
+  @include structure-ul();
+}
+/*****************************************************************/
+.dropDown-sub-list {
+  @include structure-ul();
+} 
