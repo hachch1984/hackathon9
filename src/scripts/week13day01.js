@@ -6,15 +6,10 @@ const bnPrevious = () => {
 const bnNext = () => {
     generalRequest(true);
 };
-const showLoading = (show) => {
-    let img = document.getElementById("img");
-    img.src = show ? "./images/gifLoading1.gif" : "./images/noImage.png";
-};
 const generalRequest = (next) => {
     if (next === false && skip < 0) {
         return;
     }
-    showLoading(true);
     let ul = document.getElementById("ul");
     ul.innerHTML = "";
     let xhr = new XMLHttpRequest();
@@ -45,8 +40,6 @@ const generalRequest = (next) => {
     else {
         skip -= take;
     }
-    showLoading(false);
-    console.log(skip);
 };
 generalRequest(true);
 //# sourceMappingURL=week13day01.js.map

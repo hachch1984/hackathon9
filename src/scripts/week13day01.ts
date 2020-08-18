@@ -9,24 +9,17 @@ const bnNext = () => {
   generalRequest(true);
 };
 
-const showLoading = (show: boolean) => {
-  let img = document.getElementById("img") as HTMLImageElement;
-  img.src = show ? "./images/gifLoading1.gif" : "./images/noImage.png";
-};
-
 interface iObject1 {
   name: string;
   url: string;
 }
 interface iObject2 {
-    sprites: { front_default: string };
+  sprites: { front_default: string };
 }
 const generalRequest = (next: boolean) => {
   if (next === false && skip < 0) {
     return;
   }
-
-  showLoading(true);
 
   let ul = document.getElementById("ul") as HTMLUListElement;
 
@@ -48,18 +41,17 @@ const generalRequest = (next: boolean) => {
         let img = document.createElement("img");
         p.innerHTML = obj.name;
         li.append(p, img);
-      
+
         ul.append(li);
 
         let xhr2 = new XMLHttpRequest();
         xhr2.open("GET", obj.url);
         xhr2.send();
         xhr2.onload = function () {
-          let data2 = JSON.parse(xhr2.response) as iObject2  ;
-        
-       
-    img.src= data2.sprites.front_default
-    };
+          let data2 = JSON.parse(xhr2.response) as iObject2;
+
+          img.src = data2.sprites.front_default;
+        };
       });
     }
   };
@@ -68,10 +60,6 @@ const generalRequest = (next: boolean) => {
   else {
     skip -= take;
   }
-
-  showLoading(false);
-
-  console.log(skip);
 };
 
 generalRequest(true);
