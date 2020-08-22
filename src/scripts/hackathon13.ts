@@ -38,8 +38,7 @@ const btnNewCard_add = () => {
   let div = document.createElement("div") as HTMLDivElement;
   div.className = "card";
   div.id = "div" + DivIdCount;
-  div.innerHTML = `    
-   
+  div.innerHTML = `   
         <div class="d-flex justify-content-between">
             <img class="control-image" src="./images/edit.png" alt="" onclick="bnEdit('div${DivIdCount}')">
             <img class="control-image" src="./images/close.png" alt="" onclick="bnDelete('div${DivIdCount}')">
@@ -50,14 +49,9 @@ const btnNewCard_add = () => {
         <div class="card-body d-flex flex-column align-items-center">
             <h5 class="card-title">${tbNewName.value}</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                the card's content.</p>
-          
-           
-          
+                the card's content.</p> 
         </div>
-    
     `;
-
   cards.appendChild(div);
   tbNewName.value = "";
   DivIdCount++;
@@ -67,10 +61,11 @@ const bnDelete = (id: string) => {
 
   let div = document.getElementById(id) as HTMLDivElement;
   let h5 = div.querySelector("h5") as HTMLHRElement;
-  frmDeleteCard.querySelector("p").innerHTML =
-    `Esta segura(o) de eliminar la tarjeta: <h6>${h5.innerHTML}</h6>`;
- 
-   document.getElementById('btnDeleteCard_delete')  .onclick = () => {
+  frmDeleteCard.querySelector(
+    "p"
+  ).innerHTML = `Esta segura(o) de eliminar la tarjeta: <h6>${h5.innerHTML}</h6>`;
+
+  document.getElementById("btnDeleteCard_delete").onclick = () => {
     cards.removeChild(div);
     frmDeleteCard_toggle();
   };
@@ -94,13 +89,7 @@ const bnEdit = (id: string) => {
     frmEditCard_toggle();
   };
 };
-const bnEditCard = (id: string) => {
-  /*
-  let div = document.getElementById(id) as HTMLDivElement;
-  let tb = div.querySelector("input") as HTMLInputElement;
-  console.log(tb);
-*/
-};
+ 
 const btnEditCard_close = () => {
   frmEditCard_toggle();
   tbEditName.value = "";
