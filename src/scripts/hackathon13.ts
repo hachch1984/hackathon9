@@ -32,9 +32,9 @@ const btnNewCard_close = () => {
 
 let DivIdCount = 1;
 
-const btnNewCard_add = () => {
+const btnNewCard_add = async () => {
   frmNewCard_toggle();
-
+  //https://picsum.photos/200/300?random=${DivIdCount}
   let div = document.createElement("div") as HTMLDivElement;
   div.className = "card";
   div.id = "div" + DivIdCount;
@@ -44,7 +44,7 @@ const btnNewCard_add = () => {
             <img class="control-image" src="./images/close.png" alt="" onclick="bnDelete('div${DivIdCount}')">
         </div>
         <div class="d-flex justify-content-center">
-            <img class="" src="https://picsum.photos/200/300?random=${DivIdCount}" alt="">
+            <img  id='img${DivIdCount}' src="./images/gifLoading1.gif?${Math.random}" alt="">
         </div>
         <div class="card-body d-flex flex-column align-items-center">
             <h5 class="card-title">${tbNewName.value}</h5>
@@ -54,8 +54,24 @@ const btnNewCard_add = () => {
     `;
   cards.appendChild(div);
   tbNewName.value = "";
+
+  let id = DivIdCount;
+
+  let img = document.getElementById(`img${id}`) as HTMLImageElement;
+
   DivIdCount++;
+
+  await loadImage(img, `https://picsum.photos/200/300?random=${id}`);
 };
+
+const loadImage = async (img: HTMLImageElement, src: string) => {
+  let response = await fetch(src);
+  let data = await response.blob();
+  console.log(data);
+
+  img.src = URL.createObjectURL(data);
+};
+
 const bnDelete = (id: string) => {
   frmDeleteCard_toggle();
 
@@ -89,7 +105,7 @@ const bnEdit = (id: string) => {
     frmEditCard_toggle();
   };
 };
- 
+
 const btnEditCard_close = () => {
   frmEditCard_toggle();
   tbEditName.value = "";
