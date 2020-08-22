@@ -23,20 +23,20 @@ const btnNewCard_close = () => {
     frmNewCard_toggle();
     tbNewName.value = "";
 };
-let DivIdCount = 1;
+let IdCounter = 1;
 const btnNewCard_add = async () => {
     frmNewCard_toggle();
     //https://picsum.photos/200/300?random=${DivIdCount}
     let div = document.createElement("div");
     div.className = "card";
-    div.id = "div" + DivIdCount;
+    div.id = "div" + IdCounter;
     div.innerHTML = `   
         <div class="d-flex justify-content-between">
-            <img class="control-image" src="./images/edit.png" alt="" onclick="bnEdit('div${DivIdCount}')">
-            <img class="control-image" src="./images/close.png" alt="" onclick="bnDelete('div${DivIdCount}')">
+            <img class="control-image" src="./images/edit.png" alt="" onclick="bnEdit('div${IdCounter}')">
+            <img class="control-image" src="./images/close.png" alt="" onclick="bnDelete('div${IdCounter}')">
         </div>
         <div class="d-flex justify-content-center">
-            <img  id='img${DivIdCount}' src="./images/gifLoading1.gif?${Math.random}" alt="">
+            <img  id='img${IdCounter}' src="./images/gifLoading1.gif?${Math.random}" alt="">
         </div>
         <div class="card-body d-flex flex-column align-items-center">
             <h5 class="card-title">${tbNewName.value}</h5>
@@ -46,9 +46,9 @@ const btnNewCard_add = async () => {
     `;
     cards.appendChild(div);
     tbNewName.value = "";
-    let id = DivIdCount;
+    let id = IdCounter;
+    IdCounter++;
     let img = document.getElementById(`img${id}`);
-    DivIdCount++;
     await loadImage(img, `https://picsum.photos/200/300?random=${id}`);
 };
 const loadImage = async (img, src) => {
