@@ -22,7 +22,6 @@ const generalRequest = async (next) => {
     }
     let ul = document.getElementById("ul");
     ul.innerHTML = "";
-    let cont = 0;
     let response1 = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${take}&offset=${skip + 1}`);
     let data1 = await response1.json();
     let arrPokemon = data1.results;

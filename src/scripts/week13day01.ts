@@ -37,7 +37,7 @@ const generalRequest = async (next: boolean) => {
 
   let ul = document.getElementById("ul") as HTMLUListElement;
   ul.innerHTML =  "";
-  let cont = 0;
+ 
 
   let response1 = await fetch( `https://pokeapi.co/api/v2/pokemon?limit=${take}&offset=${skip + 1}`);
   let data1 = await response1.json();
