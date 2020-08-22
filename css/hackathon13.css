@@ -1,0 +1,48 @@
+.modal-background {
+  background: rgba(23, 24, 23, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.modal-form {
+  width: 300px;
+  margin: 100px auto;
+}
+
+img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+}
+
+.cards {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.control-image {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.control-image:hover {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=hackathon13.css.map */

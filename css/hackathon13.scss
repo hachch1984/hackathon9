@@ -1,0 +1,43 @@
+.modal-background {
+  background: rgba(23, 24, 23, 0.3);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.modal-form {
+  width: 300px;
+
+  margin: 100px auto;
+}
+
+img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  
+}
+
+.cards{
+    
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.control-image {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
