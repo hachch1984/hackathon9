@@ -60,14 +60,8 @@ const btnNewCard_add = async () => {
   IdCounter++;
 
   let img = document.getElementById(`img${id}`) as HTMLImageElement;
-
-  await loadImage(img, `https://picsum.photos/200/300?random=${id}`);
-};
-
-const loadImage = async (img: HTMLImageElement, src: string) => {
-  let response = await fetch(src);
+  let response = await fetch(`https://picsum.photos/200/300?random=${id}`);
   let data = await response.blob();
-  console.log(data);
 
   img.src = URL.createObjectURL(data);
 };
